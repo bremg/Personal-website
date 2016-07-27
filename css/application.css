@@ -1,0 +1,197 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../scss/_base.scss */
+body {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 9, ../scss/_base.scss */
+h1, h2, h3 {
+  font-family: "montserrat", sans-serif;
+  color: #fffeec;
+  line-height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1em;
+  margin: 10px 0px 10px 0px;
+}
+
+/* line 20, ../scss/_base.scss */
+p {
+  font-family: "Open-Sans", sans-serif;
+  line-height: 1.7;
+  color: #fffeec;
+}
+
+/* line 26, ../scss/_base.scss */
+.hwpanel {
+  display: none;
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  position: absolute;
+  left: 25%;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  transition: all 1s ease;
+}
+
+/* line 30, ../scss/_base.scss */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* line 35, ../scss/_base.scss */
+.left-0 {
+  left: 0px;
+  z-index: 5;
+}
+
+/* line 40, ../scss/_base.scss */
+.left-25 {
+  left: 25%;
+}
+
+/* line 44, ../scss/_base.scss */
+.left-50 {
+  left: 50%;
+  z-index: 5;
+}
+
+/* line 49, ../scss/_base.scss */
+.active {
+  display: block !important;
+}
+
+/* line 1, ../scss/_main-menu.scss */
+#main-menu {
+  background-color: #73bfb8;
+  display: block !important;
+  z-index: 10;
+  text-align: center;
+}
+/* line 6, ../scss/_main-menu.scss */
+#main-menu h2 {
+  padding-bottom: 20px !important;
+  border-bottom: dotted;
+}
+
+/* line 12, ../scss/_main-menu.scss */
+.profile-avatar {
+  height: 200px;
+  margin: 30px 15px;
+}
+/* line 15, ../scss/_main-menu.scss */
+.profile-avatar img {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* line 23, ../scss/_main-menu.scss */
+.hwpanel-menu {
+  display: none;
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  position: absolute;
+  left: 25%;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  transition: all 1s ease;
+  display: block;
+}
+
+/* line 1, ../scss/_about.scss */
+#about {
+  background-color: #373f51;
+}
+
+/* line 1, ../scss/_skills.scss */
+#skills {
+  background-color: #2374ab;
+}
+
+/* line 1, ../scss/_resume.scss */
+#resume {
+  background-color: #ff8484;
+}
+
+/* line 1, ../scss/_contact.scss */
+#contact {
+  background-color: #ffa630;
+}

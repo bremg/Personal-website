@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Bram Grootjen</title>
+    <meta name="author" content="Bram Grootjen">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+
+</head>
+<body>
+
+  <!-- Main -->
+  <section class="hwpanel left-25" id="main-menu">
+    <div class="container-fluid">
+
+     <div class="row">
+        <header class="col-md-6 col-centered">
+          <div class="profile-avatar">
+            <img src="images/round-profile.png" alt="My Photo">
+          </div>
+          <h2>
+            Bram Grootjen
+          </h2>
+          <p>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget vestibulum turpis. Vestibulum luctus hendrerit est ac mattis. Curabitur ullamcorper orci magna, et ultricies ante ullamcorper in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          </p>
+        </header>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6 col-centered">
+          <ul>
+
+            <li id="about-link">      
+              <a href="#about" class="nav-link">
+                <h3>
+                  about
+                </h3>
+                <i class="fa fa-user nav-left"></i>
+              </a>
+            </li> 
+
+            <li id="skills-link">      
+              <a href="#skills" class="nav-link page-right">
+                <h3>
+                  skills
+                </h3>
+                <i class="fa fa-user nav-left"></i>
+              </a>
+            </li> 
+
+            <li id="resume-link">
+              <a href="#resume" class="nav-link">
+                <h3>
+                  resume
+                </h3>
+                <i class="fa fa-globe nav-right"></i>
+              </a>
+            </li>
+                    
+            <li id="contact-link" class="contact-link">
+              <a href="#contact" class="nav-link page-right">
+                <h3>
+                  contact
+                </h3>
+                <i class="fa fa-envelope nav-left"></i>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- About -->
+   <section class="hwpanel left-25" id="about">
+    <div class="container-fluid">
+     <div class="row">
+       about
+     </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="hwpanel left-25" id="skills">
+    <div class="container-fluid">
+     <div class="row">
+       skills
+     </div>
+    </div>
+  </section>
+
+  <!-- Resume  -->
+   <section class="hwpanel left-25" id="resume">
+    <div class="container-fluid">
+     <div class="row">
+       resume
+     </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+   <section class="hwpanel left-25" id="contact">
+    <div class="container-fluid">
+     <div class="row">
+       contact
+     </div>
+    </div>
+  </section>
+
+
+  <!-- Jquery CDN, Using v2 instead of v3 because of bootstrap incompatibility -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <!-- jQuery local fallback -->
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+  <!-- Bootstrap JS CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <!-- Bootstrap CSS local fallback -->
+  <script>
+    $(document).ready(function() {
+
+      // load bootstrap locally if CDN is offline
+      var bodyColor = $('body').css("color");
+       if(bodyColor != 'rgb(51, 51, 51)') {
+        $("head").prepend('<link rel="stylesheet" href="css/bootstrap.min.css">');
+      }
+
+    });
+  </script>
+
+</body>
+</html> 

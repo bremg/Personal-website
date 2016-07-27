@@ -1,0 +1,52 @@
+body{ 
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3 {
+	@include font-face(montserrat);
+	color: #fffeec;
+	line-height: 3em;
+	text-transform: uppercase;
+	font-weight: bold;
+  	font-size: 3em;
+  	line-height: 1em;
+    margin: 10px 0px 10px 0px;
+}
+
+p{
+	@include font-face(Open-Sans);
+	line-height: 1.7;
+	color: #fffeec;	
+}
+
+.hwpanel { 
+	@include half-screen-panel;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.left-0{
+	left: 0px;
+	z-index: 5;
+}
+
+.left-25{
+	left: 25%;
+}
+
+.left-50{
+	left: 50%;
+	z-index: 5;
+}
+
+.active{
+	display: block !important;
+}
+
