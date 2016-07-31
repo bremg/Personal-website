@@ -94,7 +94,7 @@ p {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  overflow-y: auto;
   position: absolute;
   left: 25%;
   z-index: 0;
@@ -132,6 +132,34 @@ p {
   display: block !important;
 }
 
+/* Scrollbar */
+/* line 55, ../scss/_base.scss */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+/* line 60, ../scss/_base.scss */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+/* line 67, ../scss/_base.scss */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 254, 236, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* line 73, ../scss/_base.scss */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 0, 0, 0.4);
+}
+
 /* line 1, ../scss/_main-menu.scss */
 #main-menu {
   background-color: #73bfb8;
@@ -165,7 +193,7 @@ p {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  overflow-y: auto;
   position: absolute;
   left: 25%;
   z-index: 0;
@@ -174,6 +202,141 @@ p {
   box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
   transition: all 1s ease;
   display: block;
+}
+
+/* line 28, ../scss/_main-menu.scss */
+a {
+  font-family: "montserrat", sans-serif;
+}
+
+/*
+	I took the basic button styles from : Button styling source: http://codepen.io/sazzad/pen/yNNNJG
+*/
+/* Global Button Styles */
+/* line 7, ../scss/_menu-buttons.scss */
+a.nav-link:link, a.nav-link:visited {
+  position: relative;
+  display: block;
+  margin: 15px auto 0;
+  padding: 14px 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 27, ../scss/_menu-buttons.scss */
+a.nav-link:link:after, a.nav-link:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+}
+
+/* line 40, ../scss/_menu-buttons.scss */
+a.nav-link:link:hover, a.nav-link:visited:hover {
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 44, ../scss/_menu-buttons.scss */
+a.nav-link:link:hover:after, a.nav-link:visited:hover:after {
+  height: 450%;
+}
+
+/* line 48, ../scss/_menu-buttons.scss */
+a.nav-link.page-right {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 56, ../scss/_menu-buttons.scss */
+a.nav-link.page-right:hover {
+  color: #73bfb8 !important;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+
+/* line 61, ../scss/_menu-buttons.scss */
+a.nav-link.page-right:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+
+/* line 66, ../scss/_menu-buttons.scss */
+a.nav-link.page-right:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: '';
+  color: red !important;
+  background: #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 79, ../scss/_menu-buttons.scss */
+a.nav-link.page-left {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 87, ../scss/_menu-buttons.scss */
+a.nav-link.page-left:hover {
+  color: #73bfb8 !important;
+  background-color: transparent;
+  text-shadow: nfour;
+}
+
+/* line 92, ../scss/_menu-buttons.scss */
+a.nav-link.page-left:hover:before {
+  right: 0%;
+  left: auto;
+  width: 100%;
+}
+
+/* line 97, ../scss/_menu-buttons.scss */
+a.nav-link.page-left:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: '';
+  color: #73bfb8 !important;
+  background: #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 /* line 1, ../scss/_about.scss */
@@ -191,6 +354,218 @@ p {
   background-color: #ff8484;
 }
 
+/* Snipper from : http://bootsnipp.com/snippets/featured/timeline-responsive*/
+/* line 4, ../scss/_timeline.scss */
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+/* line 10, ../scss/_timeline.scss */
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+/* line 21, ../scss/_timeline.scss */
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* line 27, ../scss/_timeline.scss */
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+/* line 32, ../scss/_timeline.scss */
+.timeline > li:after {
+  clear: both;
+}
+
+/* line 37, ../scss/_timeline.scss */
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+/* line 42, ../scss/_timeline.scss */
+.timeline > li:after {
+  clear: both;
+}
+
+/* line 46, ../scss/_timeline.scss */
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+/* line 57, ../scss/_timeline.scss */
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+/* line 69, ../scss/_timeline.scss */
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+/* line 81, ../scss/_timeline.scss */
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+/* line 100, ../scss/_timeline.scss */
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+/* line 104, ../scss/_timeline.scss */
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+/* line 111, ../scss/_timeline.scss */
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+/* line 118, ../scss/_timeline.scss */
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+/* line 122, ../scss/_timeline.scss */
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+/* line 126, ../scss/_timeline.scss */
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+/* line 130, ../scss/_timeline.scss */
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+/* line 134, ../scss/_timeline.scss */
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+/* line 138, ../scss/_timeline.scss */
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+/* line 144, ../scss/_timeline.scss */
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+/* line 148, ../scss/_timeline.scss */
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  /* line 153, ../scss/_timeline.scss */
+  ul.timeline:before {
+    left: 40px;
+  }
+
+  /* line 157, ../scss/_timeline.scss */
+  ul.timeline > li > .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+  }
+
+  /* line 163, ../scss/_timeline.scss */
+  ul.timeline > li > .timeline-badge {
+    left: 15px;
+    margin-left: 0;
+    top: 16px;
+  }
+
+  /* line 169, ../scss/_timeline.scss */
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+
+  /* line 173, ../scss/_timeline.scss */
+  ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  /* line 180, ../scss/_timeline.scss */
+  ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+}
 /* line 1, ../scss/_contact.scss */
 #contact {
   background-color: #ffa630;

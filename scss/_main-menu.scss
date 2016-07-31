@@ -24,3 +24,7 @@
 	@include half-screen-panel;
 	display: block;
 }
+
+a {
+	@include font-face(montserrat);
+}
